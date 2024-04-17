@@ -8,7 +8,15 @@ return {
 					virt_text = true,
 					virt_text_pos = "eol", -- 'eol' | 'overlay' | 'right_align'
 					delay = 500,
-					ignore_whitespace = false,
+					ignore_whitespace = true,
+				},
+				signs = {
+					add = { text = "┃" },
+					change = { text = "┃" },
+					delete = { text = "_" },
+					topdelete = { text = "‾" },
+					changedelete = { text = "~" },
+					untracked = { text = "┆" },
 				},
 			})
 		end,
