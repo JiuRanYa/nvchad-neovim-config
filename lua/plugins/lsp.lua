@@ -33,6 +33,17 @@ return {
 	{ "glepnir/lspsaga.nvim", commit = "b7b4777", event = "VeryLazy" },
 	{
 		"williamboman/mason.nvim",
+		opts = {
+			ensure_installed = {
+				"lua-language-server",
+				"vue-language-server",
+				"eslint-lsp",
+				"tailwindcss",
+				"prettierd",
+				"html-lsp",
+				"stylua",
+			},
+		},
 		config = function()
 			require("mason").setup()
 		end,
