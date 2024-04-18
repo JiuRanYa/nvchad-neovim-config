@@ -78,8 +78,7 @@ keymap("n", "<leader>/", function()
 	require("Comment.api").toggle.linewise.current()
 end)
 
--- format
--- keymap("n", "<C-s>", function() require("conform").format({ bufnr = args.buf }) end, opt)
+keymap("n", "<C-s>", ":EslintFixAll<CR>")
 
 -- insert mode move cursor
 map("i", "<C-l>", "<RIGHT>")

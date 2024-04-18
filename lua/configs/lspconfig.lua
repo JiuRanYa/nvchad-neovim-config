@@ -41,8 +41,19 @@ end
 
 -- typescript
 lspconfig.eslint.setup({
-	on_attach = on_attach,
 	capabilities = capabilities,
+	-- root_dir = util.root_pattern(
+	-- 	".eslintrc",
+	-- 	".eslintrc.js",
+	-- 	".eslintrc.cjs",
+	-- 	".eslintrc.yaml",
+	-- 	".eslintrc.yml",
+	-- 	".eslintrc.json",
+	-- 	"eslint.config.mjs"
+	-- 	-- Disabled to prevent "No ESLint configuration found" exceptions
+	-- 	-- 'package.json',
+	-- ),
+	on_attach = function(client, bufnr) end,
 })
 
 lspconfig.tsserver.setup({
@@ -52,7 +63,7 @@ lspconfig.tsserver.setup({
 			{
 				name = "@vue/typescript-plugin",
 				location = vue_language_server_path,
-				languages = { "vue" },
+				languages = { "vue", "typescript" },
 			},
 		},
 	},
@@ -60,10 +71,11 @@ lspconfig.tsserver.setup({
 
 lspconfig.volar.setup({
 	filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue", "json" },
+	on_attach = on_attach,
 	capabilities = {
 		workspace = {
 			didChangeWatchedFiles = {
-				dynamicRegistration = false,
+				dynamicRegistration = true,
 			},
 		},
 	},
