@@ -49,10 +49,14 @@ lspconfig.eslint.setup({
 	-- 	".eslintrc.yaml",
 	-- 	".eslintrc.yml",
 	-- 	".eslintrc.json",
-	-- 	"eslint.config.mjs"
+	-- 	"eslint.config.mjs",
 	-- 	-- Disabled to prevent "No ESLint configuration found" exceptions
-	-- 	-- 'package.json',
+	-- 	"package.json"
 	-- ),
+	settings = {
+		workingDirectory = { mode = "location" },
+	},
+	root_dir = util.find_git_ancestor,
 	on_attach = function(client, bufnr) end,
 })
 

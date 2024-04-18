@@ -19,7 +19,7 @@ return {
 				graphql = { "prettier" },
 				liquid = { "prettier" },
 				lua = { "stylua" },
-				vue = { "eslint" },
+				vue = { "prettier" },
 				python = { "isort", "black" },
 			},
 		})
