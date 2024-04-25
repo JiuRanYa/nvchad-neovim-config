@@ -24,12 +24,12 @@ return {
 			},
 		})
 
-		vim.keymap.set({ "n", "v" }, "<C-s>", function()
-			conform.format({
-				lsp_fallback = true,
-				async = false,
-				timeout_ms = 1000,
-			})
-		end, { desc = "Format file or range (in visual mode)" })
+		-- vim.keymap.set({ "n", "v" }, "<C-s>", function()
+		-- 	conform.format({
+		-- 		lsp_fallback = true,
+		-- 		async = false,
+		-- 		timeout_ms = 1000,
+		-- 	})
+		-- end, { desc = "Format file or range (in visual mode)" })
 	end,
 }

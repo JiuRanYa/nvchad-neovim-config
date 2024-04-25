@@ -4,7 +4,6 @@ return {
 	cmd = "Telescope",
 	keys = {
 		{ "<Leader>f", "<cmd>Telescope find_files hidden=true<CR>", {} },
-		{ "<Leader>p", ":Telescope live_grep<CR>", {} },
 		{ "<Leader>o", ":Telescope lsp_document_symbols<CR>", {} },
 		{ "<Leader>rs", ":Telescope resume<CR>", {} },
 		{ "<C-q>", ":Telescope oldfiles<CR>", {} },

@@ -42,21 +42,45 @@ end
 -- typescript
 lspconfig.eslint.setup({
 	capabilities = capabilities,
-	-- root_dir = util.root_pattern(
-	-- 	".eslintrc",
-	-- 	".eslintrc.js",
-	-- 	".eslintrc.cjs",
-	-- 	".eslintrc.yaml",
-	-- 	".eslintrc.yml",
-	-- 	".eslintrc.json",
-	-- 	"eslint.config.mjs",
-	-- 	-- Disabled to prevent "No ESLint configuration found" exceptions
-	-- 	"package.json"
-	-- ),
+	root_dir = util.root_pattern(
+		".eslintrc",
+		".eslintrc.js",
+		".eslintrc.cjs",
+		".eslintrc.yaml",
+		".eslintrc.yml",
+		".eslintrc.json",
+		"eslint.config.mjs"
+		-- Disabled to prevent "No ESLint configuration found" exceptions
+		-- "package.json"
+	),
 	settings = {
-		workingDirectory = { mode = "location" },
+		codeAction = {
+			disableRuleComment = {
+				enable = true,
+				location = "separateLine",
+			},
+			showDocumentation = {
+				enable = true,
+			},
+		},
+		codeActionOnSave = {
+			enable = false,
+			mode = "all",
+		},
+		format = true,
+		nodePath = "",
+		onIgnoredFiles = "off",
+		packageManager = "pnpm",
+		quiet = false,
+		rulesCustomizations = {},
+		run = "onType",
+		useESLintClass = false,
+		validate = "on",
+		workingDirectory = {
+			mode = "location",
+		},
 	},
-	root_dir = util.find_git_ancestor,
+	-- root_dir = util.find_git_ancestor,
 	on_attach = function(client, bufnr) end,
 })
 
