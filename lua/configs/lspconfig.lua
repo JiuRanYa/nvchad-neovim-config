@@ -107,6 +107,27 @@ lspconfig.volar.setup({
 			},
 		},
 	},
+	init_options = {
+		languageFeatures = {
+			references = true,
+			definition = true,
+			typeDefinition = true,
+			callHierarchy = true,
+			hover = true,
+			rename = true,
+			signatureHelp = true,
+			codeAction = true,
+			completion = {
+				defaultTagNameCase = "both",
+				defaultAttrNameCase = "kebabCase",
+				getDocumentNameCasesRequest = true,
+				getDocumentSelectionRequest = true,
+			},
+			documentLink = true,
+			codeLens = true,
+			diagnostics = true,
+		},
+	},
 	on_new_config = function(new_config, new_root_dir)
 		new_config.init_options.typescript.tsdk = get_typescript_server_path(new_root_dir)
 	end,
