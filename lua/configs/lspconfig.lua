@@ -4,13 +4,12 @@ local on_init = require("nvchad.configs.lspconfig").on_init
 local capabilities = require("nvchad.configs.lspconfig").capabilities
 
 local lspconfig = require("lspconfig")
-local servers = { "html", "cssls", "volar", "eslint", "tailwindcss" }
-
 local mason_registry = require("mason-registry")
+local util = require("lspconfig.util")
 local vue_language_server_path = mason_registry.get_package("vue-language-server"):get_install_path()
 	.. "/node_modules/@vue/language-server"
 
-local util = require("lspconfig.util")
+local servers = { "html", "cssls", "volar", "eslint", "tailwindcss", "lua_ls" }
 local function get_typescript_server_path(root_dir)
 	-- local global_ts = "/home/[yourusernamehere]/.npm/lib/node_modules/typescript/lib"
 	local global_ts = "/Users/jiuran/.config/nvm/versions/node/v20.11.1/lib/node_modules/typescript/lib"
