@@ -48,9 +48,10 @@ lspconfig.eslint.setup({
 		".eslintrc.yaml",
 		".eslintrc.yml",
 		".eslintrc.json",
-		"eslint.config.mjs"
+		"eslint.config.mjs",
+		"eslint.config.js",
 		-- Disabled to prevent "No ESLint configuration found" exceptions
-		-- "package.json"
+		"package.json"
 	),
 	settings = {
 		codeAction = {
@@ -84,7 +85,7 @@ lspconfig.eslint.setup({
 })
 
 lspconfig.tsserver.setup({
-	filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "json", "vue" },
+	filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue", "json" },
 	init_options = {
 		plugins = {
 			{
