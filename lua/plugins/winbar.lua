@@ -2,7 +2,7 @@ return {
 	{
 		event = "VeryLazy",
 		"fgheng/winbar.nvim",
-		config = function()
+		opts = function()
 			require("winbar").setup({
 				enabled = true,
 

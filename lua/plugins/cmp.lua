@@ -1,7 +1,7 @@
 return {
 	{
 		"hrsh7th/nvim-cmp",
-		config = function()
+		opts = function()
 			local cmp = require("cmp")
 			local lspkind = require("lspkind")
 
