@@ -44,6 +44,7 @@
   "nvim-web-devicons": { "branch": "master", "commit": "e37bb1feee9e7320c76050a55443fa843b4b6f83" },
   "plenary.nvim": { "branch": "master", "commit": "a3e3bc82a3f95c5ed0d7201546d5d2c19b20d683" },
   "sonokai": { "branch": "master", "commit": "da5b10020b9ca960f5a0296ab59ccc44f0d7718e" },
+  "telescope-media.nvim": { "branch": "main", "commit": "aa67b00b3a0811c10c9c545127020d0fed04fc7e" },
   "telescope.nvim": { "branch": "master", "commit": "5665d93988acfbb0747bdbf4f4cb583bcebc8930" },
   "toggleterm.nvim": { "branch": "main", "commit": "fee58a0473fd92b28c34f8f724e4918b15ba30a3" },
   "ui": { "branch": "v2.5", "commit": "5fe258afeb248519fc2a1681b48d24208ed22abe" },
