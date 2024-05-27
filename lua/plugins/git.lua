@@ -21,13 +21,4 @@ return {
 			})
 		end,
 	},
-	{
-		"tpope/vim-fugitive",
-		event = "VeryLazy",
-		config = function()
-			vim.cmd.cnoreabbrev([[git Git]])
-			vim.cmd.cnoreabbrev([[gp Git push]])
-		end,
-		cmd = "Git",
-	},
 }
