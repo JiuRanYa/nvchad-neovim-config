@@ -8,7 +8,7 @@ return {
 		{ "<Leader>rs", ":Telescope resume<CR>", {} },
 		{ "<C-q>", ":Telescope oldfiles<CR>", {} },
 	},
-	config = function()
+	opts = function()
 		require("telescope").setup({
 			defaults = {
 				file_ignore_patterns = { "node_modules" },
