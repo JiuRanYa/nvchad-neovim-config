@@ -7,7 +7,7 @@ return {
 		end,
 	},
 	{
-		"xiantang/nvim-lspconfig",
+    "neovim/nvim-lspconfig",
 		event = "BufRead",
 		-- use commit
 		dependencies = {
@@ -29,7 +29,6 @@ return {
 			require("configs.lspconfig")
 		end,
 	},
-	{ "onsails/lspkind.nvim", event = "VeryLazy" },
 	{
 		"nvimdev/lspsaga.nvim",
 		config = function()
