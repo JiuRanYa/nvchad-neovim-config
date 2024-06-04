@@ -13,6 +13,7 @@ local keymap = vim.keymap.set
 
 local hop = require("hop")
 local directions = require("hop.hint").HintDirection
+local opt = { silent = true }
 
 function map(mode, lhs, rhs, opts)
 	local options = { noremap = true }
@@ -24,6 +25,10 @@ end
 
 -- 设置jj退出insert
 map("i", "jj", "<Esc>", { noremap = true })
+
+keymap("n", "<leader>sf", function()
+    require('telescope.builtin').spell_suggest(require("telescope.themes").get_cursor({}))
+end, { desc = "Spelling Suggestions" })
 
 -- 刷新lua配置
 map("n", "<leader>rs", ":luafile ~/.config/nvim/init.lua<CR>", { noremap = true })
@@ -38,10 +43,10 @@ map("n", "<S-h>", ":BufferLineCyclePrev<CR>", opt)
 map("n", "<S-l>", ":BufferLineCycleNext<CR>", opt)
 
 -- 关闭当前缓冲区
-map("n", "<leader>bd", ":BufferLineClose<CR>", opts)
+map("n", "<leader>bd", ":BufferLineClose<CR>", opt)
 
 -- 关闭除当前缓冲区外的所有缓冲区
-map("n", "<leader>bD", ":BufferLineCloseAllButCurrent<CR>", opts)
+map("n", "<leader>bD", ":BufferLineCloseAllButCurrent<CR>", opt)
 
 -- 窗口切换
 map("n", "<leader>h", "<C-w>h", opt)
