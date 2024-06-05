@@ -11,7 +11,7 @@ return {
 	opts = function()
 		require("telescope").setup({
 			defaults = {
-				file_ignore_patterns = { "node_modules" },
+				file_ignore_patterns = { "node_modules", "es", "lib", "dist" },
 			},
 			pickers = {
 				live_grep = {
